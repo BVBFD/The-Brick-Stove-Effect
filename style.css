@@ -174,9 +174,23 @@ body {
   background: transparent;
 }
 
+.room .stove .bottomPartStove .stoveHole .stoveHole {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room .stove .bottomPartStove .woodBox {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  margin: auto;
+}
+
 .room .stove .bottomPartStove .stoveHole .wood {
   position: absolute;
-  top: 10rem;
+  top: 100%;
   z-index: 99999999;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -237,7 +251,7 @@ body {
   height: 40%;
   background: transparent;
   position: absolute;
-  top: 30%;
+  top: 32%;
   left: 30%;
   z-index: 999999999999999999999;
 }
@@ -409,4 +423,55 @@ body {
   height: 66%;
   position: absolute;
   filter: blur(0.5px);
+}
+
+@media screen and (max-width: 1024px) {
+  .room .stove {
+    top: 1rem;
+  }
+
+  .room .sofaImg {
+    display: none;
+  }
+
+  .room .frame {
+    display: none;
+  }
+
+  .room .tableImg {
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    transform: scale(0.9);
+    filter: blur(0.6px);
+  }
+
+  .room .table2Img {
+    bottom: 2%;
+    right: 0;
+    transform: scale(0.6);
+    filter: blur(0.6px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .room .table2Img {
+    transform: scale(1);
+  }
+
+  .room .tableImg {
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 30%;
+    transform: scale(1);
+    filter: blur(0.6px);
+  }
+
+  .room .table2Img {
+    bottom: 2%;
+    transform: scale(1.3);
+    filter: blur(0.6px);
+  }
 }
